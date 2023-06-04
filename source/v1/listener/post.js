@@ -3,8 +3,8 @@ import {addUser} from "../component/users/create";
 
 export const Post = {
 
-    "/tasks":createTask,
+    "/tasks":(req, res)=>createTask(req, res),
 
-    "/users":addUser
+    "/users":(req, res)=>addUser(req, res)
 
 }

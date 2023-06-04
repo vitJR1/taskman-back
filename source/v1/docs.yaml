@@ -21,3 +21,29 @@ paths:
       responses:
         '200':
           description: OK
+  /users:
+    post:
+      description: create user
+      tags:
+        - Users
+      summary: Список пользоватей
+      requestBody:
+        $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+        login:
+          type: string
+        password:
+          type: string

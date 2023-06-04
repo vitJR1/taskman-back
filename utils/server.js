@@ -40,20 +40,20 @@ cors(corsOptions)
 
 app.use(cors());
 
-for (const [key, obj] in [{'get':Get}, {'post':Post}, {'put':Put}, {'patch':Patch}])
-    for (const endpoint in obj)
-        app[key](endpoint, middleSecure, obj[endpoint])
+// for (const [key, obj] in [{'get':Get}, {'post':Post}, {'put':Put}, {'patch':Patch}])
+//     for (const endpoint in obj)
+//         app[key](endpoint, middleSecure, obj[endpoint])
 
-// for (const endpoint in Get)
-//     app.get(endpoint, middleSecure, Get[endpoint])
-//
-// for (const endpoint in Post)
-//     app.post(endpoint, middleSecure, Post[endpoint])
-//
-// for (const endpoint in Put)
-//     app.put(endpoint, middleSecure, Put[endpoint])
-//
-// for (const endpoint in Patch)
-//     app.patch(endpoint, middleSecure, Patch[endpoint])
+for (const endpoint in Get)
+    app.get(endpoint, middleSecure, Get[endpoint])
+
+for (const endpoint in Post)
+    app.post(endpoint, middleSecure, Post[endpoint])
+
+for (const endpoint in Put)
+    app.put(endpoint, middleSecure, Put[endpoint])
+
+for (const endpoint in Patch)
+    app.patch(endpoint, middleSecure, Patch[endpoint])
 
 module.exports = app
