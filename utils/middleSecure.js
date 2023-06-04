@@ -6,11 +6,10 @@ import {error500} from "../source/v1/globals/errors/e500";
 export const middleSecure = async (req, res, next)=>{
 
     // TODO token validating
-
+    //  here could be your safety
     // try {
     //     let token = JSON.parse(decrypt(req.headers.token))
-    //     token.query = await query(req, 'taskman')
-    //     if(!token.query)
+    //     if(!token['somekey'])
     //         return sender(res, error500)
     //     req.token = token;
     //     next()

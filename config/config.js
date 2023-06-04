@@ -15,23 +15,8 @@ export const cfg = {
 
     logFormat: " :method :url :status :datetime :res[content-length] - :response-time ms :body",
 
-    PORT : 2509
+    PORT : 8080
 }
-
-export const dbCon = {
-    /*---------------POSTGRES----------------*/
-    PGUSER: process.env['PGUSER'],
-    PGHOST: process.env['PGHOST'],
-    PGPASSWORD: process.env['PGPASSWORD'],
-    PGPORT: process.env['PGPORT'],
-
-    /*---------------MYSQLI-------------------*/
-    MSQLIUSER: process.env['MSQLIUSER'],
-    MSQLIHOST: process.env['MSQLIHOST'],
-    MSQLIPASSWORD: process.env['MSQLIPASSWORD'],
-    MSQLIPORT: process.env['MSQLIPORT'],
-}
-
 export const corsOptions = {
     origin: '*',
     optionsSuccessStatus: 200
