@@ -1,6 +1,10 @@
+import {taskList} from "../component/tasks/list";
+import {getUsers} from "../component/users/list";
 
 export const Get = {
 
-    "/tasks":taskList
+    "/tasks":taskList,
+
+    "/users":getUsers
 
 }
