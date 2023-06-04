@@ -1,0 +1,52 @@
+openApi: "3.0.0"
+info:
+  title: Taskman
+  description:
+    'Taskman open documentations'
+  version: 1.0.0
+#  license:
+#    name: MIT License
+#    url: https://opensource.org/licenses/MIT
+securityDefinitions:
+  TokenHeader:
+    type: apiKey
+    name: token
+    in: header
+security:
+  - TokenHeader: []
+paths:
+  /:
+    get:
+      description: 'Welcome'
+      tags:
+        - Welcome
+      operationId: ping
+      summary: 'Пример запроса'
+      security: []
+      responses:
+        '200':
+          description: OK
+responses:
+  successStatus:
+    description: 'Успешное обновление/создание'
+    schema:
+      properties:
+        status:
+          type: string
+          example: 'success'
+  incorrectKeys:
+    description: 'Неверные параметры запроса'
+    schema:
+      properties:
+        error:
+          type: string
+          example: 'Incorrect keys'
+  undefinedToken:
+    description: 'Ошибка при отсутствии или неверном токене'
+    schema:
+      properties:
+        status:
+          type: string
+          example: 'Undefined token'
+  undefinedSource:
+    description: 'Ресурс не найден, неверный id или путь'
