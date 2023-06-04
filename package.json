@@ -4,7 +4,7 @@
     "description": "",
     "main": "app.js",
     "scripts": {
-        "local": "localSSl=./config/ssl cross-env PGUSER='postgres' cross-env PGHOST='localhost' cross-env PGPASSWORD='root' cross-env PGPORT='5432' cross-env MSQLIUSER='root' cross-env MSQLIHOST='localhost' cross-env MSQLIPASSWORD='root' cross-env MSQLIPORT='3306' cross-env SECRET_KEY='ZC69TLCH812sgqGLmFRpDmNof3AyySno1cA7iIjFYHREM3bcI63x0SUcdRUAUY21' nodemon app.js --exec babel-node --presets babel-preset-env",
+        "local": "localSSl=./config/ssl cross-env cross-env SECRET_KEY='ZHOASDMST2sgqGLmFRpGOSof3AyySno1cA7asdFYHREM3bcI63x0SU123RUAUY21' nodemon app.js --exec babel-node --presets babel-preset-env",
         "start": "nodemon app.js --exec babel-node --presets babel-preset-env"
     },
     "keywords": [],
