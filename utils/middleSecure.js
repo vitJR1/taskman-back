@@ -1,5 +1,4 @@
 import {decrypt} from "tools-pack/crypt/crypt";
-import {query} from "../source/v1/db/dbConnection";
 import {sender} from "../source/v1/globals/send/sender";
 import {error403} from "../source/v1/globals/errors/e403";
 import {error500} from "../source/v1/globals/errors/e500";
